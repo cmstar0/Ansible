@@ -1,0 +1,19 @@
+written for version on ansible installed
+will assume you are only dealing with standard aws modules and only dealing with linux and windows
+for e-mailing, will assume control host (machine this playbook runs from) has been setup for e-mail
+
+
+currently will only deploy one instance at a time and will only deploy if name is unique?  need to verify this and perhaps change this to 
+variable in vars files
+
+assume the approprite key (from vars.yml) in loaded
+
+cp /tmp/training.pem ~/.ssh/
+chmod 600 ~/.ssh/training.pem
+ssh-agent bash
+ssh-add ~/.ssh/training.pem
+
+
+TO DO:
+
+need to verify with several win and linux use cases
