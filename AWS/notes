@@ -17,3 +17,6 @@ ssh-add ~/.ssh/training.pem
 TO DO:
 
 need to verify with several win and linux use cases
+
+
+added to git, not including userdata files in repo due to security concerns.
