@@ -1,0 +1,33 @@
+# Perform system/app updates on the instance
+#
+#
+
+
+- name: Update Instance
+  hosts: Newly_Created
+  user: ec2-user
+  become: true
+ 
+  tasks:
+  - name: Update RHEL Based Instances
+    yum: 
+      name: '*'
+      state: latest 
+    when: (ansible_os_family == "RedHat" or ansible_os_family == "CentOS")
+
+
+
+#- name: Update Instance
+#  hosts: Newly_Created
+#  user: ubuntu 
+#  become: true
+#
+#  tasks:
+#  - name: Update Ubuntu Based Instances  
+#    apt:
+#      name: '*'
+#      state: latest
+#    when: (ansible_os_family == "Ubuntu")
+  
+  #when: target_platform == 'linux'
+

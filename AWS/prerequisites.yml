@@ -1,0 +1,10 @@
+
+
+
+- set_fact:
+    user_data_file: "{{ lookup('template', 'userdata_{{ target_platform}}.j2') }}"
+    
+    host_control_port: "{% if target_platform == 'linux' %} 22 
+                        {% elif target_platform == 'windows' %} 5986 
+                        {% endif %}"
+        

@@ -1,0 +1,19 @@
+---
+    
+    # Prerequisites
+    #- include: prerequisites.yml
+
+    # Create Instance
+- include: instance_create.yml
+    
+    # Update Instance
+- include: instance_update.yml
+
+    # Configure Network/DNS
+    # Configure Time Services (timezone, ntp, etc)a
+    # Configure Monitoring Services (SNMP) 
+    # Configure LDAP/AD
+    # Configure Antivirus
+    # Configure Platform Specifics
+    # - SCCM Windows
+    # Harden Instance 

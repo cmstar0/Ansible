@@ -1,0 +1,53 @@
+# Administrative
+#------------------------------
+#mail_from: AWS_Ansible                                                  #
+#mail_to: admin                                                          #
+
+# Deployment Environment
+#------------------------------
+environment_type: public                                                # Type of environment/network. Are you working with public or private addresses.
+
+target_region: us-east-1                                                # AWS Region into which we will deploy instance 
+
+
+# Deployment AMI Details
+#------------------------------
+
+#target_platform: windows
+#target_virt_type: hvm
+#target_ami_owner: amazon
+#target_ami_name: Windows_Server-2012-R2_RTM-English-64Bit-Base-* 
+#user_data_file: userdata_windows.j2
+
+target_platform: linux                                                 # OS platform of the instance: windows | linux 
+target_virt_type: hvm                                                  # Instance virtualization type: (e.g. hvm)
+target_ami_owner: 309956199498                                         # ID of AMI Owner: amazon | 309956199498 (Red Hat) | 410186602215 (CentOS) | 099720109477 (Ubuntu)
+target_ami_name: RHEL-7.*GA*  	                		        # Search string/base AMI name to search from in AWS AMI inventory
+user_data_file: userdata_rhel-7.j2
+ 
+
+#target_platform: linux                                                 # OS platform of the instance: windows | linux
+#target_virt_type: hvm                                                  # Instance virtualization type: (e.g. hvm)
+#target_ami_owner: 099720109477                                         # ID of AMI Owner: amazon | 309956199498 (Red Hat) | 410186602215 (CentOS) | 099720109477 (Ubuntu)
+#target_ami_name: ubuntu*xenial*16.04*amd64*server*                                            # Search string/base AMI name to search from in AWS AMI inventory
+#user_data_file: userdata_linux.j2
+
+# New Instance Details
+#------------------------------
+target_instance_type: t2.micro
+target_vpc_subnet_id: subnet-ef89e28a
+target_security_groups: sg-b42669c9
+target_instance_name: tester2 
+target_ec2_key: MyEC2Key
+
+
+
+
+
+
+#win_initial_password: Cmpc2002
+#sec_group_name: testwinprovsg
+#sec_group_desc: testwinprovsg
+
+
+#cmpc_environment: sandbox
